@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Authenticator";
+}
+
+<div class="row">
+    <div class="offset-sm-3 offset-sm-4 col-sm-6 col-lg-4">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0">Authenticator</h4>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="code" class="form-label">Secret code from server</label>
+                    <input type="text" class="form-control form-control-sm" id="code" />
+                    <button type="button" id="genBtn" class="btn btn-outline-primary btn-sm mt-2">Start generating</button>
+                </div>
+
+
+                <div id="pindiv" style="display:none;">
+                    <hr />
+                    <h3>Pin: <span style="font-family:Consolas;" class="fw-bold" id="pinsp">123456</span></h3>
+                    <p>Expire in: <span id="exp">12</span>s</p>
+                </div>
+
+            </div>
+           @* <div class="card-footer d-flex flex-row justify-content-end">
+                <button type="button" class="btn btn-primary btn-sm ms-2" id="transfer">Stop geerating</button>
+            </div>*@
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/jsOTP.min.js" asp-append-version="true"></script>
+    <script src="~/js/authenticator.js" asp-append-version="true"></script>
+}
