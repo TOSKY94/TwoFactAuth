@@ -22,7 +22,7 @@
                     alert('token is required for this trasaction!');
                 } else {
                     $.ajax({
-                        url: 'https://localhost:44345/home/validate',
+                        url: 'https://localhost:7139/home/validate',
                         method: 'POST',
                         data: { username, token },
                         success: (data) => {

@@ -7,7 +7,7 @@
             alert('Username is required');
         } else {
             $.ajax({
-                url: 'https://localhost:44345/home/setup2FA',
+                url: 'https://localhost:7139/home/setup2FA',
                 method: 'POST',
                 data: { username },
                 success: (data) => {
